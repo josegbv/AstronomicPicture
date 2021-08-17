@@ -3,16 +3,18 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     astro:[],
+    RamdonAstro:[],
+    WeekAstro:[]
   },
   mutations: {
     setAstro(state, payload){
       state.astro = payload
     },
     setAstroPerMonth(state, payload){
-      state.astro= payload
+      state.WeekAstro= payload
     },
     setAstroRamdon(state, payload){
-      state.astro = payload
+      state.RamdonAstro = payload
     },
    
   },
@@ -40,7 +42,7 @@ export default createStore({
           if(day < 10){
             day = "0" + day
           }
-          
+
           let EndDate = `${fechaActual.getFullYear()}-${month}-${day}`;
           let StartDate = `${fechaActual.getFullYear()}-${month}-${day - 7}`
           const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=rFV0Np08b2EiXuwyVQbQx3GmNLS6b82yvLZuvBJj&start_date=${StartDate}&end_date=${EndDate}`);

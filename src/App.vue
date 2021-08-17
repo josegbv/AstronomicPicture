@@ -56,10 +56,19 @@ font: normal 1.2em/normal "Poiret One", sans-serif;
 text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
 }
 
+.imageGrid{
+  height: 400px;
+  width: 400px;
+}
+
 @media screen and (max-width: 500px) {
   .brillant{
     font: normal 0.6em/normal "Poiret One", sans-serif;
   }
+  .imageGrid{
+  height: 200px;
+  width: 400px;
+}
 }
 
 .v-main {
@@ -69,6 +78,8 @@ text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 3
 .gradientPurple{
   background-image: linear-gradient(225deg, #ee7aff 0, #a060ff 25%, #4d42d4 50%, #002597 75%, #000b61 100%);
 }
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 

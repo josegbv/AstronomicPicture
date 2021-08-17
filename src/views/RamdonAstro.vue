@@ -25,7 +25,7 @@ components: { Astro },
          })
 
          const ramdon = computed(()=>{
-            return  store.state.astro
+            return  store.state.RamdonAstro
         })    
       
         return {ramdon};

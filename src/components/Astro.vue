@@ -3,13 +3,18 @@
  <p style="color:white; text-align:center">Astronomics Picture</p>
 
 
-    <v-card style="margin-bottom:100px; border-radius: 50px; background:black"
+    <v-card style="margin-bottom:100px; border-radius: 50px; background:black "
     class="mx-auto rounded-20"
-    max-width="700"   
+   
   >
-    <v-img v-if="astro.url" 
+
+    <v-img v-if="!astro.url"
+      src="../assets/loading3.gif">
+    </v-img>
+
+    <v-img v-else 
       :src= astro.url 
-      height="auto">
+      class="imageGrid">
 
     <v-card-title class="pt-16 brillant"  style="text-align:center; color:white; font-weight: bold;"  >
       {{astro.title}}
@@ -17,15 +22,7 @@
 
     </v-img>
 
-    <v-img v-else
-      src="../assets/loading3.gif"
-      height="auto">
-
-    <v-card-title class="pt-16 brillant"  style="text-align:center; color:white; font-weight: bold;"  >
-      {{astro.title}}
-    </v-card-title>
-
-    </v-img>
+    
 
     <v-card-actions class="gradientPurple">
 
