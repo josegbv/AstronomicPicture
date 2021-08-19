@@ -1,19 +1,34 @@
 <template>
-  <div>
-    <day-astro/>
-  </div>
+  <v-container>
+   <h1 class="mt-7 mb-7" style="text-align:center">Ramdon Astro</h1>
+  <astro :astro="DayAstro"/>
+ </v-container>
 </template>
 
 <script>
-import DayAstro from '../components/DayAstro.vue';
-
+import { computed, onMounted } from '@vue/runtime-core';
+import {useStore} from "vuex";
+import Astro from '../components/Astro.vue';
 export default {
-  name: 'Home',
   
-  components: {
-   
-    DayAstro
-  
-  },
-};
+components: { Astro },
+
+    data: () => ({
+      show: false,
+    }),
+
+
+    setup(){
+         const store = useStore();
+         onMounted(()=>{
+            store.dispatch("getAstro");
+         })
+
+         const DayAstro = computed(()=>{
+            return  store.state.astro
+        })    
+      
+        return {DayAstro};
+    }
+}
 </script>
