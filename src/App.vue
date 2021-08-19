@@ -57,8 +57,8 @@ text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 3
 }
 
 .imageGrid{
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: auto;
 }
 
 @media screen and (max-width: 500px) {

@@ -1,7 +1,6 @@
 <template>
    <h1 class="mt-7 mb-7" style="text-align:center">Astro Per Week</h1>
     <v-container>
-      <waiting v-if="!Month" />
       <v-row> 
         <v-col cols="6" xs="4" sm="6" md="4" lg="4" xl="3" v-for="astroRepeat in Month" :key="astroRepeat.url"> 
           <astro :astro="astroRepeat"/>
@@ -14,11 +13,11 @@
 import { computed, onMounted } from '@vue/runtime-core';
 import {useStore} from "vuex";
 import Astro from '../components/Astro.vue'
-import Waiting from '../components/waiting.vue';
+
 
 
 export default {
-  components: {Astro, Waiting },
+  components: {Astro},
 
   setup(){
     const store = useStore();
